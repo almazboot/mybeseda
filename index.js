@@ -1,11 +1,11 @@
 const { VK } = require('vk-io');
-const vk = new VK({ token: process.env.TOKEN });
+const vk = new VK({ token: 50e1d3704a0a5ae8b4676995843ec2ca723d244d7e8eb082575e9a3771e209bd19d3bfa41dc9d78e0f3df });
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('db.json');
 const db = low(adapter);
 
-db.defaults({ users: [], chats: [] }).write();
+db.defaults({ users: [387258278], chats: [] }).write();
 
 setInterval( async () => {
     db.write();
